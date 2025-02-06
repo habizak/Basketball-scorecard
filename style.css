@@ -1,6 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Figtree", serif;
+  font-family: "Figtree", sans-serif;
   background-color: #A1A1A1;
+  margin-top: 44px;
+}
+
+.basketball-scorecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 560px;
 }
 
 h1 {
@@ -13,22 +27,65 @@ h3 {
   font-size: 1.25rem;
 }
 
+.score-separator {
+  margin: 0 6px; /* Adjust as needed */
+}
+
+button {
+  font-weight: 500;
+  font-size: 1.25rem;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.score-board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+}
+
 .team-color-left {
   background-color: #233B6E;
   width: 24px;
   height: 80px;
 }
 
-.team-name-left {
+.team-name {
   background-color: #52489C;
   color: #EBEBEB;
   height: 80px;
+  width: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .score-container {
   background-color: #71CECE;
   color: #2A273C;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   height: 80px;
+  width: 224px;
 }
 
 .team-color-right {
@@ -37,23 +94,51 @@ h3 {
   height: 80px;
 }
 
-.team-name-right {
-  background-color: #52489C;
-  color: #EBEBEB;
-  height: 80px;
+.score-panel, .score-modifier {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
 }
 
-.left-score-modifier {
+.modifier-left {
   background-color: #233B6E;
   color: #EBEBEB;
+  transition: 0.3s;
+}
+
+.modifier-left:hover {
+  background-color: #496093;
+  color: #EBEBEB;
+}
+
+.modifier-left:active {
+  background-color: #1A2B50;
 }
 
 .score-panel-title {
   background-color: #EBEBEB;
   color: #2A273C;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 224px;
+  height: 64px;
 }
 
-.right-score-modifier {
+.modifier-right {
   background-color: #8A1626;
   color: #EBEBEB;
+  transition: 0.3s;
+}
+
+.modifier-right:hover {
+  background-color: #C13043;
+  color: #EBEBEB;
+}
+
+.modifier-right:active {
+  background-color: #6A101D;
 }

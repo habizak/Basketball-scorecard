@@ -10,28 +10,38 @@
   
   <body>
     <main class="basketball-scorecard">
-      <img src="Image/NBA Logo.svg">
+      <img class="logo" src="Image/NBA Logo.svg">
       <div class="score-board-container">
-        <div class="team-color-left"></div> <!-- team colour left -->
-        <h1 class="team-name-left">PHI</h1>
-        <h1 class="score-container">0 - 0</h1>
-        <h1 class="team-name-right">TOR</h1>
-        <div class="team-color-right"></div> <!-- team colour right -->
-      </div> <!-- score board container -->
+      
+        <div class="score">
+          <div class="team-color-left"></div>
+          <h1 class="team-name">PHI</h1>
+            <div class="score-container">
+              <h1 class="score-left">0</h1>
+              <h1 class="score-separator">-</h1>
+              <h1 class="score-right">0</h1>
+            </div> <!-- score container -->
+          <h1 class="team-name">TOR</h1>
+          <div class="team-color-right"></div>
+        </div> <!-- score -->
 
-      <div class="score-panel">
-        <div class="left-score-modifier">
-          <h3 class="modifier-1">+1</h3>
-          <h3 class="modifier-2">+2</h3>
-          <h3 class="modifier-3">+3</h3>
-        </div> <!-- left score modifier -->
-        <h3 class="score-panel-title">SCORE PANEL</h3>
-        <div class="right-score-modifier">
-          <h3 class="modifier-1">+1</h3>
-          <h3 class="modifier-2">+2</h3>
-          <h3 class="modifier-3">+3</h3>
-        </div> <!-- right score modifier -->
-      </div> <!--  Score Panel -->
+        <div class="score-panel">
+          <div class="score-modifier">
+            <button class="modifier-left" aria-label="add 1 point">+1</button>
+            <button class="modifier-left" aria-label="add 2 points">+2</button>
+            <button class="modifier-left" aria-label="add 3 points">+3</button>
+          </div> <!-- score modifier -->
+          
+          <h3 class="score-panel-title" aria-hidden="true">SCORE PANEL</h3>
+          
+          <div class="score-modifier">
+            <button class="modifier-right" aria-label="add 1 point">+1</button>
+            <button class="modifier-right" aria-label="add 2 points">+2</button>
+            <button class="modifier-right" aria-label="add 3 points">+3</button>
+          </div> <!-- score modifier -->
+        </div> <!--  Score panel -->
+      
+      </div> <!--  Score board container -->
     </main>
   </body>
 </html>
