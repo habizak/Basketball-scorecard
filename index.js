@@ -6,32 +6,32 @@ let leftScore = 0;
 
 function rightAdd1Point() {
   rightScore += 1;
-  scoreLeft.innerText = rightScore;
+  scoreRight.innerText = rightScore;
 }
 
 function rightAdd2Points() {
   rightScore += 2;
-  scoreLeft.innerText = rightScore;
+  scoreRight.innerText = rightScore;
 }
 
 function rightAdd3Points() {
   rightScore += 3;
-  scoreLeft.innerText = rightScore;
+  scoreRight.innerText = rightScore;
 }
 
 function leftAdd1Point() {
   leftScore += 1;
-  scoreRight.innerText = leftScore;
+  scoreLeft.innerText = leftScore;
 }
 
 function leftAdd2Points() {
   leftScore += 2;
-  scoreRight.innerText = leftScore;
+  scoreLeft.innerText = leftScore;
 }
 
 function leftAdd3Points() {
   leftScore += 3;
-  scoreRight.innerText = leftScore;
+  scoreLeft.innerText = leftScore;
 }
 
 // Select timer display
@@ -52,6 +52,7 @@ function startTimer() {
       clearInterval(timer);
       timerRunning = false;
       timerDisplay.innerText = "00:00"; // Stop at zero
+      timerDisplay.style.color = "#F45B69"; // Ensure it's red at 00:00
       return;
     }
 
@@ -61,6 +62,11 @@ function startTimer() {
 
     // Update timer display
     timerDisplay.innerText = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    // 🔥 Change text color when 1:00 is reached (Fix: Move inside setInterval)
+    if (gameTime === 60) {
+      timerDisplay.style.color = "#F45B69"; 
+    }
   }, 1000);
 }
 
