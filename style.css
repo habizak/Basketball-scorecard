@@ -1,3 +1,59 @@
 body {
   font-family: "Figtree", serif;
+  background-color: #A1A1A1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.team-color-left {
+  background-color: #233B6E;
+  width: 24px;
+  height: 80px;
+}
+
+.team-name-left {
+  background-color: #52489C;
+  color: #EBEBEB;
+  height: 80px;
+}
+
+.score-container {
+  background-color: #71CECE;
+  color: #2A273C;
+  height: 80px;
+}
+
+.team-color-right {
+  background-color: #8A1626;
+  width: 24px;
+  height: 80px;
+}
+
+.team-name-right {
+  background-color: #52489C;
+  color: #EBEBEB;
+  height: 80px;
+}
+
+.left-score-modifier {
+  background-color: #233B6E;
+  color: #EBEBEB;
+}
+
+.score-panel-title {
+  background-color: #EBEBEB;
+  color: #2A273C;
+}
+
+.right-score-modifier {
+  background-color: #8A1626;
+  color: #EBEBEB;
 }
