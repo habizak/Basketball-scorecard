@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
   </head>
   
   <body>
@@ -13,31 +14,40 @@
       <img class="logo" src="Image/NBA Logo.svg">
       <div class="score-board-container">
       
-        <div class="score">
-          <div class="team-color-left"></div>
-          <h1 class="team-name">PHI</h1>
-            <div class="score-container">
-              <h1 class="score-left">0</h1>
-              <h1 class="score-separator">-</h1>
-              <h1 class="score-right">0</h1>
-            </div> <!-- score container -->
-          <h1 class="team-name">TOR</h1>
-          <div class="team-color-right"></div>
-        </div> <!-- score -->
+        <div class="ticker">
+          
+          <div class="team-score">
+            <div class="team-color-left"></div>
+            <h1 class="team-name">PHI</h1>
+              <div class="score-container">
+                <h1 class="score-left" id="scoreLeft">0</h1>
+                <h1 class="score-separator">-</h1>
+                <h1 class="score-right" id="scoreRight">0</h1>
+              </div> <!-- score container -->
+            <h1 class="team-name">TOR</h1>
+            <div class="team-color-right"></div>
+          </div> <!-- Team score -->
+
+          <div class="time">
+            <p>TIME LEFT</p>
+            <h2>00:00</h2>
+          </div>
+
+        </div> <!-- Ticker -->
 
         <div class="score-panel">
           <div class="score-modifier">
-            <button class="modifier-left" aria-label="add 1 point">+1</button>
-            <button class="modifier-left" aria-label="add 2 points">+2</button>
-            <button class="modifier-left" aria-label="add 3 points">+3</button>
+            <button class="modifier-left" aria-label="add 1 point" onclick="rightAdd1Point()">+1</button>
+            <button class="modifier-left" aria-label="add 2 points" onclick="rightAdd2Points()">+2</button>
+            <button class="modifier-left" aria-label="add 3 points" onclick="rightAdd3Points()">+3</button>
           </div> <!-- score modifier -->
           
           <h3 class="score-panel-title" aria-hidden="true">SCORE PANEL</h3>
           
           <div class="score-modifier">
-            <button class="modifier-right" aria-label="add 1 point">+1</button>
-            <button class="modifier-right" aria-label="add 2 points">+2</button>
-            <button class="modifier-right" aria-label="add 3 points">+3</button>
+            <button class="modifier-right" aria-label="add 1 point" onclick="leftAdd1Point()">+1</button>
+            <button class="modifier-right" aria-label="add 2 points" onclick="leftAdd2Points()">+2</button>
+            <button class="modifier-right" aria-label="add 3 points" onclick="leftAdd3Points()">+3</button>
           </div> <!-- score modifier -->
         </div> <!--  Score panel -->
       
